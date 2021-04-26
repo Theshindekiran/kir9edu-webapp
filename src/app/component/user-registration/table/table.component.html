@@ -1,0 +1,16 @@
+<div>
+    <h2>User Data List</h2>
+    <div style="margin-right: 10px;" *ngFor="let data of users_L; let id = index;">
+        <div style="display: grid;">
+            <label>Name: {{data.name | shorten: 8 | uppercase}}</label>
+            <label>Address: {{data.address | shorten: 10}}</label>
+            <label>Id: {{data.id}}</label>
+        </div>
+        
+        <div>
+            <button mat-flat-button color="primary" (click)="editUser(data, id)">Edit</button>
+            <button mat-stroked-button color="primary"  style="margin: 0 10px;" (click)="deleteUser(data, id)">Delete</button>
+        </div>
+        <hr>
+    </div>
+</div>

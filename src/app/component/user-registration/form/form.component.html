@@ -1,0 +1,45 @@
+<div>
+    <h2>Manage users</h2>
+    <form [formGroup]="registrationForm">
+        <div style="width: 80%;">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input  matInput formControlName="name" placeholder="Enter name" >
+                </mat-form-field>     
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input  matInput formControlName="email" placeholder="Enter email" >
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone</mat-label>
+                    <input  matInput formControlName="phone"  placeholder="Enter phone number" >
+                </mat-form-field>
+            </div>
+           <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <input  matInput formControlName="address" placeholder="Enter address" >
+                </mat-form-field>
+           </div>
+        </div>
+    </form>
+
+    <div style="margin-bottom: 10px; display: grid;">
+        <button [disabled]="registrationForm.invalid" 
+        mat-raised-button (click)="register_Mth()"
+        color="primary">{{flag ? 'Edit' : 'Save'}}</button>
+        <label appHintBehaviour *ngIf="!flag">Enter all details</label>
+    </div>
+    <div style="display: grid;">
+        <button [disabled]="false" 
+        mat-raised-button (click)="reset_Mth()"
+        color="primary">Reset</button>
+        <label appHintBehaviour *ngIf="flag">You can discard edit & add new user</label>
+    </div>
+
+</div>
