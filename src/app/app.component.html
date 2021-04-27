@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 10;">
 
-  <div style="background-color: #ca2128; height: 56px; ">
+  <div style="background-color: #ca2128; height: 56px; width: 100%;">
     <div style="height: 100%; margin: 0 20px; display: flex;">
       <img *ngIf="true" style="width: 130px;" src="https://cdn.insideiim.com/assets/img/logo.svg">
     </div>
@@ -28,13 +28,14 @@
     </div>
   </div>
 
-  <div style="display: grid; grid-auto-flow: column; grid-auto-columns: 50% 50%;">
-    <app-table   
-      (editedUser_o)="editedOperation_Mth($event)">
-    </app-table>
-    <!-- <app-table></app-table> -->
+  <div class="comb">
     <app-form (resetEdited_OMth)="flagReset($event)"
       [flag]="editedOperation_Fl" ></app-form>
+      
+
+      <app-table   
+      (editedUser_o)="editedOperation_Mth($event)">
+    </app-table>
   </div>
 
 

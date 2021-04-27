@@ -18,10 +18,10 @@ export class UserService {
     ) { 
     this.registrationForm =  this.formBuilder.group({
       id:'',
-      name : new FormControl('kiran', [Validators.required, Validators.maxLength(30)]),
-      email : new FormControl('kiran@com', [Validators.required, Validators.email, Validators.maxLength(25)]),
-      phone : new FormControl('876', [Validators.required, Validators.maxLength(10)]),
-      address : new FormControl('jhjh', [Validators.required,  Validators.maxLength(40)])
+      name : new FormControl('name', [Validators.required, Validators.maxLength(30)]),
+      email : new FormControl('name@gmail.com', [Validators.required, Validators.email, Validators.maxLength(25)]),
+      phone : new FormControl('9898989898', [Validators.required, Validators.maxLength(10)]),
+      address : new FormControl('something', [Validators.required,  Validators.maxLength(40)])
     });
     //this.getAllUsers();
   }
