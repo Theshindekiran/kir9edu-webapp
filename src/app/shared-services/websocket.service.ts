@@ -20,7 +20,7 @@ export class WebsocketService {
   eventLog: string[] = [];
   BaseUrl: any;
   constructor(private httpSocket: HttpClient){
-    this.BaseUrl = 'http://localhost:8080/kir9edu-api/';
+    this.BaseUrl = 'https://kir9edu-socket.herokuapp.com/';
     this.log('logCreationStart')
     
   }
